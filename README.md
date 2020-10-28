@@ -37,3 +37,5 @@ console.log(strOrg, strAdjusted);
 ## static ChineseAdjustor.encodingToUtf8(str)
 
 ## useful script https://github.com/creatxrgithub/utils/blob/main/adjust_chinese2trad.js
+## 我選漢字：https://github.com/creatxrgithub/articles/blob/master/%E5%8E%9F%E5%8A%8D.%E6%80%9D%E6%96%87.%E6%88%91%E9%81%B8%E6%BC%A2%E5%AD%97.txt
+
