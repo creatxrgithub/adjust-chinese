@@ -1,8 +1,8 @@
 {
   "name": "simp2trad",
   "version": "1.0.0",
-  "description": "simple chinese to tradition chinese",
-  "main": "index.js",
+  "description": "simple chinese to tradition chinese 簡體轉繁體",
+  "main": "adjust_chinese2tc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,10 @@
     "url": "git+https://github.com/creatxrgithub/simp2trad.git"
   },
   "keywords": [
-    "translate",
     "chinese",
-    "tradition"
+    "tradition",
+    "簡轉繁",
+    "簡體轉繁體"
   ],
   "author": "creatxr",
   "license": "MIT",
