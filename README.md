@@ -6,7 +6,9 @@
 const ChineseAdjustor = require('adjust-chinese');
 
 let tempT = [
-
+  '个個箇',
+  ['$1卷',/([破])捲/g],
+  ['﹡','[＊]',/\*/]
 ];
 
 /**
