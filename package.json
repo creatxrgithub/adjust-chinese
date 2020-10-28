@@ -1,5 +1,5 @@
 {
-  "name": "simp2trad",
+  "name": "adjust-chinese",
   "version": "1.0.0",
   "description": "simple chinese to tradition chinese 簡體轉繁體",
   "main": "adjust_chinese2tc.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creatxrgithub/simp2trad.git"
+    "url": "git+https://github.com/creatxrgithub/adjust-chinese.git"
   },
   "keywords": [
     "chinese",
@@ -19,7 +19,7 @@
   "author": "creatxr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creatxrgithub/simp2trad/issues"
+    "url": "https://github.com/creatxrgithub/adjust-chinese/issues"
   },
-  "homepage": "https://github.com/creatxrgithub/simp2trad#readme"
+  "homepage": "https://github.com/creatxrgithub/adjust-chinese#readme"
 }
