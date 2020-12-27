@@ -10,6 +10,7 @@ class ChineseAdjustor {
 			for(let i=0; i<eval(dictionaries[t]).length; i++) {
 				let oo = [];
 				for(let o of eval(dictionaries[t])[i]) oo.push(o);  /** 這是分割單字的最好方法 */
+				//設字符串 str='㗰𠳝' 分割單字可能可以使用 Array.from(str) 但不能使用 str.split('')
 				if(oo.length<2) continue;
 				for(let j=1; j<oo.length; j++) {
 					this.fromT.push(new RegExp(oo[j],'g'));
