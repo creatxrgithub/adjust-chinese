@@ -43,4 +43,8 @@ console.log(strOrg, strAdjusted);
 測試 line 002
 =======
 測試 line001
+<<<<<<< HEAD
 >>>>>>> 0e8edc7... Update README.md
+=======
+>>>>>>> 0e8edc7b47645e85a6bf60ce020a8b86ff950c02
+>>>>>>> 21d7a844b13c1bb41db5eb7b8a6a26b80afb4c23
