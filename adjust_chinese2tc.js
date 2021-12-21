@@ -8,7 +8,7 @@ class ChineseAdjustor {
 		if(arguments[0]==null) return;
 		for(let t=0; t<dictionaries.length; t++) {
 //** 使用這段代碼以避免使用 eval() 函數（用以轉化字符串爲調用變量）
-			let dict = null;
+			let dict = '';
 			if((typeof dictionaries[t]) === 'object') {
 				dict = dictionaries[t];
 			} else if((typeof dictionaries[t]) === 'string') {
