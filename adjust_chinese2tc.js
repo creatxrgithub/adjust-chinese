@@ -1,4 +1,4 @@
-const {standardT, contextT, symbolT, notRenameT, sectionT, daoistDefT, daoistT, daoistTokenT, abcT, traAdjustT, policsT, correctOcrT, dotT, encodingT} = require('./adjust_chinese_dict.js');
+const dicts = {standardT, contextT, symbolT, notRenameT, sectionT, daoistDefT, daoistT, daoistTokenT, abcT, traAdjustT, policsT, correctOcrT, dotT, encodingT} = require('./adjust_chinese_dict.js');
 
 class ChineseAdjustor {
 	constructor(dictionaries) {
@@ -7,10 +7,21 @@ class ChineseAdjustor {
 		if(arguments.length==0) return;
 		if(arguments[0]==null) return;
 		for(let t=0; t<dictionaries.length; t++) {
-			for(let i=0; i<eval(dictionaries[t]).length; i++) {
+//** 使用這段代碼以避免使用 eval() 函數（用以轉化字符串爲調用變量）
+			let dict = null;
+			if((typeof dictionaries[t]) === 'object') {
+				dict = dictionaries[t];
+			} else if((typeof dictionaries[t]) === 'string') {
+				dict = dicts[dictionaries[t]];
+			}
+//** 使用這段代碼以避免使用 eval() 函數（用以轉化字符串爲調用變量）
+//			for(let i=0; i<eval(dictionaries[t]).length; i++) {
+			for(let i=0; i<dict.length; i++) {
 				let oo = [];
-				for(let o of eval(dictionaries[t])[i]) oo.push(o);  /** 這是分割單字的最好方法 */
-				//設字符串 str='㗰𠳝' 分割單字可能可以使用 Array.from(str) 但不能使用 str.split('')
+//				for(let o of eval(dictionaries[t])[i]) oo.push(o);  /** 這是分割單字的最好方法 */
+//				oo = Array.from(eval(dictionaries[t])[i]);  /** 這是分割單字的最好方法 */
+				oo = Array.from(dict[i]);  /** 這是分割單字的最好方法 */
+				//設字符串 str='㗰𠳝' 分割單字可以使用 Array.from(str) 但不能使用 str.split('')
 				if(oo.length<2) continue;
 				for(let j=1; j<oo.length; j++) {
 					this.fromT.push(new RegExp(oo[j],'g'));
