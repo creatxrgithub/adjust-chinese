@@ -24,6 +24,8 @@ class ChineseAdjustor {
 				//設字符串 str='㗰𠳝' 分割單字可以使用 Array.from(str) 也可以使用 [...str] 但不能使用 str.split('')
 				if(oo.length<2) continue;
 				for(let j=1; j<oo.length; j++) {
+					//this.fromT.push(new RegExp(oo[j],'ug'));
+					//You should not escape the hyphen outside a character class in ES6 regex used with the u flag
 					this.fromT.push(new RegExp(oo[j],'g'));
 					this.toT.push(oo[0]);
 				}
