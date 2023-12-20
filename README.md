@@ -39,12 +39,8 @@ console.log(strOrg, strAdjusted);
 ## useful script https://github.com/creatxrgithub/utils/blob/main/adjust_chinese2trad.js
 ## 我選漢字：https://github.com/creatxrgithub/articles/blob/master/%E5%8E%9F%E5%8A%8D.%E6%80%9D%E6%96%87.%E6%88%91%E9%81%B8%E6%BC%A2%E5%AD%97.txt
 
-<<<<<<< HEAD
-測試 line 002
-=======
-測試 line001
-<<<<<<< HEAD
->>>>>>> 0e8edc7... Update README.md
-=======
->>>>>>> 0e8edc7b47645e85a6bf60ce020a8b86ff950c02
->>>>>>> 21d7a844b13c1bb41db5eb7b8a6a26b80afb4c23
+鍼對中英文混排預處理作一些更改：消除漢字間的空格，保留英文間及英文與漢字間的空格，不替換英文間的半角符號。
+
+括號匹配仍會如前，將成對替換成「『』」，未能在正則表達式中預判是否處於英文或代碼的語境中，不能成對跳過不含漢字的括號對，故保持最小匹配的替換。
+
+這些預處理是爲了將混亂的文本比如 OCR 的內容整理簡潔些再手工校對。
